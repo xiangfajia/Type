@@ -1,0 +1,423 @@
+@charset "utf-8";
+/*--------------------------------------------------------------
+1. 样式重置
+--------------------------------------------------------------*/
+
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Classic Grotesque W01", Arial, "Hiragino Sans GB", "STHeiti",
+    "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  font-size: 14px;
+  line-height: 1.6em;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  color: #6e7173;
+}
+
+a:hover {
+  color: #444;
+}
+
+a:active {
+  outline: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(51, 51, 51, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d2d2d2;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #aaa;
+}
+
+::selection {
+  background: #d3d3d3;
+  color: #555;
+}
+
+::-moz-selection {
+  background: #d3d3d3;
+  color: #555;
+}
+
+::-webkit-selection {
+  background: #d3d3d3;
+  color: #555;
+}
+
+/*--------------------------------------------------------------
+2. 页眉
+--------------------------------------------------------------*/
+
+.headerCent {
+  max-width: 740px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 90px;
+  padding: 0 10px;
+}
+
+.headerCent img {
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+}
+
+.separator::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 3px;
+  background-color: #333;
+  margin-top: 5px;
+}
+
+/*--------------------------------------------------------------
+3. 主页样式
+--------------------------------------------------------------*/
+
+#main {
+  max-width: 740px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 90px;
+  padding: 0 10px;
+}
+
+.postTitle {
+  font-size: 27px;
+  margin-bottom: 25px;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
+    Hiragino Sans GB, Droid Sans Fallback, Microsoft YaHei, sans-serif;
+  font-weight: normal;
+  margin-top: 0;
+  line-height: 1.3;
+}
+
+.postTitle a {
+  color: #222;
+}
+
+.postData {
+  text-indent: 0.1em;
+  color: #aaa;
+  font-weight: bolder;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.postList {
+  padding: 0;
+  margin: 0;
+}
+
+.postList li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ebebeb;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.listPostTitle {
+  float: left;
+  margin: 0;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.listPostTitle a:hover {
+  text-decoration: underline;
+}
+
+.listPostData {
+  float: right;
+  color: #b7b7b7;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.postListTitle {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/*--------------------------------------------------------------
+4. 文章样式
+--------------------------------------------------------------*/
+
+.postContent {
+  font-size: 16px;
+  line-height: 1.8rem;
+  color: #494949;
+  text-align: justify;
+  margin-top: 3px;
+  text-justify: ideographic;
+  word-wrap: break-word;
+}
+
+.page .postContent {
+  padding-top: 13px;
+}
+
+.postContent a {
+  color: #222;
+  text-decoration: underline;
+}
+
+.postContent a:hover {
+  color: rgba(0, 0, 0, 0.6);
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+.postContent .more a {
+  border: none;
+  color: #6e7173;
+  font-size: 0.95rem;
+}
+
+.postContent .more a:hover {
+  color: #666;
+}
+
+.postContent p {
+  margin: 0 0 1.3rem 0;
+}
+
+.postContent img {
+  margin: 0.8rem 0;
+  max-width: 100%;
+  display: block;
+}
+
+.postContent h2,
+.postContent h3 {
+  margin: 1.4em 0 1.1em;
+  font-size: 20px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.44);
+}
+
+.postContent hr {
+  margin: 2.4em auto;
+  border: none;
+  border-bottom: 2px solid #8f98a1;
+  max-width: 80px;
+}
+
+.postContent ol {
+  margin: 0 0 20px;
+  list-style: none;
+  padding: 0;
+  counter-reset: a;
+}
+
+.postContent ul {
+  margin: 0 0 20px;
+  list-style-type: circle;
+  padding: 0;
+}
+
+.postContent ul li {
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+.postContent ol li {
+  margin-bottom: 12px;
+}
+
+.postContent ol > li::before {
+  content: counter(a, decimal) ".";
+  counter-increment: a;
+  padding-right: 12px;
+}
+
+.postContent ol > li > p,
+.postContent ul > li > p {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.postContent blockquote {
+  padding: 0 15px;
+  margin: 1.5rem 0 1.5rem 0;
+  color: #999;
+  border-left: 3px solid #555;
+  font-size: 15px;
+  line-height: 1.7rem;
+}
+
+.postContent blockquote > p {
+  margin-bottom: 0.5rem;
+}
+
+.postContent pre,
+code {
+  font-family: Consolas, Liberation Mono, Menlo, Courier, monospace;
+  direction: ltr;
+  border: none;
+}
+
+.postContent pre {
+  overflow: auto;
+  word-wrap: normal;
+  font-size: 14px;
+  margin: 0 0 1.275em;
+  padding: 0.85em 1em;
+  background: #f7f7f7;
+  border-left: 3px solid rgba(0, 0, 0, 0.08);
+}
+
+.postContent pre > code {
+  display: inline;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  font-size: 0.85em;
+  white-space: pre;
+  background: 0 0;
+}
+
+.postContent abbr {
+  position: relative;
+  font-variant: normal;
+  text-decoration: none;
+  cursor: help;
+}
+
+.postContent abbr::after {
+  position: absolute;
+  top: 0.4rem;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  content: "・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・";
+}
+
+.aBefore {
+  display: inline-block;
+  text-decoration: none;
+  color: #767676;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0 3px;
+  border-bottom: 3px solid #eee;
+}
+
+/*--------------------------------------------------------------
+5. 页脚
+--------------------------------------------------------------*/
+
+#footer {
+  padding: 2.5em 0 3.2em;
+}
+
+.footerBox {
+  max-width: 740px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 140px;
+  padding: 0 10px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------
+6. 归档
+--------------------------------------------------------------*/
+
+.archivesRear {
+  font: bold 25px/1.1 ff-tisa-web-pro, Cambria, "Times New Roman", Georgia,
+    Times, sans-serif;
+}
+
+.al_mon_list {
+  font-size: 15px;
+}
+
+.al_mon_list li {
+  margin: 8px 0;
+}
+
+.al_mon_list li a {
+  margin-left: 15px;
+}
+
+/*--------------------------------------------------------------
+7. 响应式
+--------------------------------------------------------------*/
+
+@media (max-width: 768px) {
+  .listPostTitle,
+  .listPostData {
+    float: none;
+  }
+  .listPostTitle {
+    font-size: 17px;
+  }
+  .postListTitle{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerCent {
+    display: none;
+  }
+  .listPostData {
+    float: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #main {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerBox {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .postTitle {
+    font-size: 25px;
+  }
+}
