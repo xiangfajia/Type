@@ -23,9 +23,9 @@
     <ul class="postList">
     <li class="postListTitle">All Posts</li>
 	<?php while($this->next()): ?>
-    <li>
-    <h2 class="listPostTitle"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
-    <span class="listPostData"><?php $this->date("M d, Y "); ?></span></li>
+    <li itemscope="itemscope" itemtype="http://schema.org/Article">
+    <h2 class="listPostTitle" itemprop="name headline"><a href="<?php $this->permalink() ?>" itemprop="url"><?php $this->title() ?></a></h2>
+    <time class="listPostData" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date("M d, Y "); ?></time></li>
 	<?php endwhile; ?>
     </ul>
 </main>
