@@ -1,10 +1,10 @@
 <?php
 /**
- * Hello , 2018 !!!
+ * Clean, modern and stylish Typecho theme
  * 
  * @package 
  * @author 想法家
- * @version 1.1
+ * @version 1.1 
  * @link http://xiangfajia.cn
  */
 
@@ -12,9 +12,12 @@
  ?>
 <header>
 
-<div class="headerCent now">
-
-    <a href="<?php $this->options->siteUrl(); ?>now.html"><img src="<?php $this->options->themeUrl('static/image/t.jpeg'); ?>"></a>
+<div class="headerCent">
+    <?php if ($this->options->avatarUrl): ?>
+    <a href="<?php $this->options->avatarUrl(); ?>"><?php $this->author->gravatar('75'); ?></a>
+    <?php else: ?>
+    <?php $this->author->gravatar('75'); ?>
+    <?php endif; ?>
     <div class="separator"></div>
 </div>
 
