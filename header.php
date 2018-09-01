@@ -13,6 +13,7 @@
         ), '', ' - '); ?><?php $this->options->title(); ?></title>
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
     <link rel="shortcut icon" href="<?php $this->options->themeUrl('static/image/favicon.ico'); ?>" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_818162_25vjo14xb77.css">
     <?php $this->header('wlw=&xmlrpc=&rss2=&atom=&rss1=&template=&pingback=&generator='); ?>
 </head>
 <body>

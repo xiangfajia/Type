@@ -6,7 +6,7 @@
         <div class="postContent">
         <?php $this->content(); ?>
         </div>
-        <a href="<?php $this->options->siteUrl(); ?>" class="aBefore" rel="nofollow">« BEFORE</a>
+        <a href="<?php $this->options->siteUrl(); ?>" class="homePage" rel="nofollow">« BEFORE</a>
     </article>
 </mian>
 <?php $this->need('footer.php'); ?>
