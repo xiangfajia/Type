@@ -116,7 +116,7 @@ img {
 }
 
 .postTitle {
-  font-size: 27px;
+  font-size: 28px;
   margin-bottom: 20px;
   font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
     Hiragino Sans GB, Droid Sans Fallback, Microsoft YaHei, sans-serif;
@@ -359,6 +359,9 @@ code {
   float: left;
   font-size: 18px;
 }
+.al_mon_list li a:hover {
+  text-decoration: underline;
+}
 .al_mon_list li span {
   float: right;
   color: #b7b7b7;
@@ -373,14 +376,20 @@ code {
 -------------------------------------------------------------- */
 @media (max-width: 768px) {
   .listPostTitle,
-  .listPostData {
+  .listPostData,
+  .al_mon_list li a,
+  .al_mon_list li span {
     float: none;
   }
-  .listPostTitle {
+  .listPostTitle,
+  .al_mon_list li a {
     font-size: 17px;
   }
   .postListTitle {
     font-size: 14px;
+  }
+  .al_mon_list li span{
+    display: block;
   }
 }
 @media (max-width: 768px) {

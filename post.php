@@ -1,8 +1,8 @@
 <?php $this->need('header.php'); ?>
 
 <mian id="main">
-    <article class="post">
-        <h1 class="postTitle"><?php $this->title() ?></h1>
+    <article class="post" itemscope itemtype="https://schema.org/Article">
+        <h1 class="postTitle" itemprop="name headline"><?php $this->title() ?></h1>
         <div class="postContent">
         <?php $this->content(); ?>
         </div>
