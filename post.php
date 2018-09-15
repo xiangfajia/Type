@@ -8,5 +8,6 @@
         </div>
         <a href="<?php $this->options->siteUrl(); ?>" class="homePage" rel="nofollow">« BEFORE</a>
     </article>
+    <?php $this->need('comments.php'); ?>
 </mian>
 <?php $this->need('footer.php'); ?>
